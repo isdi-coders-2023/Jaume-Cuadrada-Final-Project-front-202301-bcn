@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import { render, screen } from "@testing-library/react";
 import LoginForm from "./LoginForm";
+import GlobalStyles from "../../styles/GlobalStyles";
 
 describe("Given a LoginForm component", () => {
   describe("When its rendered", () => {
@@ -10,6 +11,7 @@ describe("Given a LoginForm component", () => {
 
       render(
         <ThemeProvider theme={mainTheme}>
+          <GlobalStyles />
           <LoginForm />
         </ThemeProvider>
       );
