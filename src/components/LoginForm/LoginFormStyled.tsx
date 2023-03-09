@@ -7,8 +7,8 @@ const LoginFormStyled = styled.form`
   gap: 100px;
 
   input {
-    border: 2px solid ${(props) => props.theme.colors.seccondaryGrey};
     border-radius: ${(props) => props.theme.radius.loginInputs};
+    border: 2px solid ${(props) => props.theme.colors.seccondaryGrey};
     height: 55px;
     width: 100%;
     font-size: ${(props) => props.theme.fontSizes.medium};

@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
 *, ::after, ::before {
   box-sizing: border-box;
 }
+
 body {
   padding: 12px;
   background-color: ${(props) => props.theme.colors.background};
@@ -11,16 +12,19 @@ body {
   color: ${(props) => props.theme.colors.mainText};
   min-height: 100vh;
 }
+
 h1,h2{
   padding: 0;
   margin: 0;
 }
+
 ol, ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
+
 button{
   background-color: transparent;
   border: none;
@@ -29,13 +33,12 @@ button{
 }
 
 input{
- 
- background-color: transparent;
+  background-color: transparent;
 }
 
 a, :visited, :active{
-text-decoration: none;
-color: ${(props) => props.theme.colors.seccondaryText}
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.seccondaryText}
 }
 
 ::placeholder {
