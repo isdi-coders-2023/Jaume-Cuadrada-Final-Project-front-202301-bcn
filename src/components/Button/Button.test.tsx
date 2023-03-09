@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
+import GlobalStyles from "../../styles/GlobalStyles";
 
 describe("Given a Button component", () => {
   describe("When its rendered", () => {
@@ -10,6 +11,7 @@ describe("Given a Button component", () => {
 
       render(
         <ThemeProvider theme={mainTheme}>
+          <GlobalStyles />
           <Button text="SEND" />
         </ThemeProvider>
       );
