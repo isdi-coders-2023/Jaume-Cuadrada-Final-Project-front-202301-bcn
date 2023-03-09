@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import LoginFormStyled from "./LoginFormStyled";
 
 const LoginForm = (): JSX.Element => {
@@ -17,7 +18,7 @@ const LoginForm = (): JSX.Element => {
         className="login-form__field"
       />
 
-      <button>SEND</button>
+      <Button text="SEND"></Button>
     </LoginFormStyled>
   );
 };
