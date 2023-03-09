@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  padding: 20px;
+  padding: 12px;
   background-color: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.mainFont};
   color: ${(props) => props.theme.colors.mainText};
@@ -28,10 +28,21 @@ button{
   font-family: inherit;
 }
 
+input{
+ 
+ background-color: transparent;
+}
+
 a, :visited, :active{
 text-decoration: none;
 color: ${(props) => props.theme.colors.seccondaryText}
 }
+
+::placeholder {
+  color: ${(props) => props.theme.colors.mainText};
+  font-weight: 50;
+}
+
 `;
 
 export default GlobalStyles;
