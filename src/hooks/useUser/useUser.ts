@@ -1,8 +1,8 @@
+import { useAppDispatch } from "../../store/hooks";
+import { CustomTokenPayload, LoginResponse, UserCredentials } from "./types";
 import decodeToken from "jwt-decode";
 import { User } from "../../store/features/userSlice/types";
 import { loginUserActionCreator } from "../../store/features/userSlice/userSlice";
-import { useAppDispatch } from "../../store/hooks";
-import { LoginResponse, UserCredentials, CustomTokenPayload } from "./types";
 
 interface UseUserStructure {
   loginUser: (userCredentials: UserCredentials) => Promise<void>;
@@ -20,7 +20,7 @@ const useUser = (): UseUserStructure => {
       const response = await fetch(
         `${apiUrl}${usersEndPoint}${loginEndPoint}`,
         {
-          method: "POS",
+          method: "POST",
           body: JSON.stringify(userCredentials),
           headers: { "Content-Type": "application/json" },
         }
@@ -33,9 +33,9 @@ const useUser = (): UseUserStructure => {
       const { id, username } = tokenPayload;
 
       const userLogin: User = {
-        id,
-        token,
         username,
+        token,
+        id,
       };
 
       dispatch(loginUserActionCreator(userLogin));
