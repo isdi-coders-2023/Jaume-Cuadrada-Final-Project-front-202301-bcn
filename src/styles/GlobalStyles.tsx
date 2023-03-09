@@ -6,8 +6,9 @@ const GlobalStyles = createGlobalStyle`
 }
 body {
   padding: 20px;
-  background-color: #2e2e2e;
-  font-family: var(--main-font);
+  background-color: ${(props) => props.theme.colors.background};
+  font-family: ${(props) => props.theme.mainFont};
+  color: ${(props) => props.theme.colors.mainText};
   min-height: 100vh;
 }
 h1,h2{
@@ -26,17 +27,10 @@ button{
   cursor: pointer;
   font-family: inherit;
 }
-:root {
-  --main-color-button: #FF0000;
-  --main-color-text: #FFFF;
-  --secondary-color-text: #FF0000;
-  --third-color-text: #6D6D6D;
-  --main-font: "Montserrat", sans-serif;
- 
-}
+
 a, :visited, :active{
 text-decoration: none;
-color: var(--third-color-text)
+color: ${(props) => props.theme.colors.seccondaryText}
 }
 `;
 
