@@ -7,6 +7,7 @@ const LoginPage = () => {
       <img src="media/photos/WCcolor.png" alt="waxcrate logo" />
       <h1>LOGIN</h1>
       <LoginForm />
+      <div className="image-container"></div>
     </LoginPageStyled>
   );
 };
