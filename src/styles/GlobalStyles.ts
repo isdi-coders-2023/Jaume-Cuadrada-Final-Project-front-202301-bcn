@@ -7,9 +7,9 @@ const GlobalStyles = createGlobalStyle`
 
 body {
   padding: 12px;
-  background-color: ${(props) => props.theme.colors.background};
-  font-family: ${(props) => props.theme.mainFont};
-  color: ${(props) => props.theme.colors.mainText};
+  background-color: #2e2e2e;
+  font-family: "Montserrat";
+  color: white;
   min-height: 100vh;
 }
 
@@ -38,11 +38,11 @@ input{
 
 a, :visited, :active{
   text-decoration: none;
-  color: ${(props) => props.theme.colors.seccondaryText}
+  color: #FF0000;
 }
 
 ::placeholder {
-  color: ${(props) => props.theme.colors.mainText};
+  color: white;
   font-weight: 50;
 }
 
