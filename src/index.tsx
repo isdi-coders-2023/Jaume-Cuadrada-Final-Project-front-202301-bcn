@@ -12,15 +12,12 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
 import LoginPage from "./pages/LoginPage";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: "",
-    children: [
-      { path: "/", element: <LoginPage /> },
-      { path: "/form", element: "" },
-    ],
+    children: [{ path: "/", element: <LoginPage /> }],
   },
 ]);
 

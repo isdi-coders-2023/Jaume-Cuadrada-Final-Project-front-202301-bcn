@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import Button from "./Button";
-import renderWithProviders from "../../testUtil";
+import renderWithProviders from "../../utils/renderWithProviders";
 
 describe("Given a Button component", () => {
   describe("When its rendered", () => {

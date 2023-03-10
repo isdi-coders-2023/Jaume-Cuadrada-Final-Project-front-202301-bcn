@@ -6,6 +6,7 @@ const Layout = (): JSX.Element => {
       <main>
         <Outlet />
       </main>
+      <nav></nav>
     </>
   );
 };
