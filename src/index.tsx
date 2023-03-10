@@ -10,6 +10,7 @@ import "@fontsource/montserrat";
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: "",
     children: [
-      { path: "/", element: "" },
+      { path: "/", element: <LoginPage /> },
       { path: "/form", element: "" },
     ],
   },

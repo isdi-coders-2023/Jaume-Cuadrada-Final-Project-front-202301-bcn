@@ -1,7 +1,7 @@
-import LoginForm from "./components/LoginForm/LoginForm";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  return <LoginForm />;
+  return <Layout />;
 }
 
 export default App;
