@@ -4,7 +4,6 @@ import LoginFormStyled from "./LoginFormStyled";
 const LoginForm = (): JSX.Element => {
   return (
     <LoginFormStyled className="login-form">
-      <h1>LOGIN</h1>
       <input
         type="text"
         id="username"

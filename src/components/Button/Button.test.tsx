@@ -1,20 +1,13 @@
-import { ThemeProvider } from "styled-components";
-import mainTheme from "../../styles/mainTheme";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import Button from "./Button";
-import GlobalStyles from "../../styles/GlobalStyles";
+import renderWithProviders from "../../utils/renderWithProviders";
 
 describe("Given a Button component", () => {
   describe("When its rendered", () => {
     test("Then it should show a button with text 'SEND' on it", () => {
       const buttonText = "SEND";
 
-      render(
-        <ThemeProvider theme={mainTheme}>
-          <GlobalStyles />
-          <Button text="SEND" />
-        </ThemeProvider>
-      );
+      renderWithProviders(<Button text="SEND" />);
 
       const expectedButtonText = screen.getByRole("button", {
         name: buttonText,
