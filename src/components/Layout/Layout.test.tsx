@@ -13,9 +13,9 @@ describe("Given a Layout component", () => {
         </ThemeProvider>
       );
 
-      const navigationBar = screen.getByRole("navigation");
+      const component = screen.getByRole("main");
 
-      expect(navigationBar).toBeInTheDocument();
+      expect(component).toBeInTheDocument();
     });
   });
 });
