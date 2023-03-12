@@ -9,6 +9,7 @@ const NavBarStyled = styled.nav`
   width: 428px;
   color: white;
   font-size: 16px;
+  border-top: 2px solid ${(props) => props.theme.colors.seccondaryGrey};
 
   .navbar-bar {
     width: 100%;

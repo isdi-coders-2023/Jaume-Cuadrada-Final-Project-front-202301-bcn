@@ -18,7 +18,6 @@ const LoginFormStyled = styled.form`
 
   button {
     margin-top: 50px;
-    background-color: ${(props) => props.theme.colors.mainButton};
   }
 `;
 
