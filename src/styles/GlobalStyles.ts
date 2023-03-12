@@ -42,7 +42,7 @@ a, :visited, :active{
 }
 
 ::placeholder {
-  color: white;
+  color: #6d6d6d;
   font-weight: 50;
 }
 

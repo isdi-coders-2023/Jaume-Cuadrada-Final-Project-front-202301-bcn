@@ -4,9 +4,9 @@ const mainTheme: DefaultTheme = {
   mainFont: "Montserrat",
   colors: {
     background: "#2e2e2e",
-    mainButton: "##FF0000",
+    mainButton: "#FF0000",
     mainText: "#FFFF",
-    seccondaryText: "##FF0000",
+    seccondaryText: "#FF0000",
     seccondaryGrey: "#6d6d6d",
   },
   fontSizes: {

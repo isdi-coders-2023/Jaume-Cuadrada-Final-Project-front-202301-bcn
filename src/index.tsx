@@ -4,8 +4,6 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./store/store";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import "@fortawesome/fontawesome-free";
 import "@fontsource/montserrat";
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
@@ -35,5 +33,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-reportWebVitals();
