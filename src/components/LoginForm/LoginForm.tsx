@@ -8,7 +8,6 @@ const LoginForm = (): JSX.Element => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleUsername = ({
     target: { value },
@@ -29,7 +28,6 @@ const LoginForm = (): JSX.Element => {
 
     setUsername("");
     setPassword("");
-    setFormSubmitted(true);
   };
 
   return (
@@ -40,7 +38,6 @@ const LoginForm = (): JSX.Element => {
         placeholder="Username"
         className="login-form__field"
         autoComplete="off"
-        value={formSubmitted ? "" : username}
         onChange={handleUsername}
       />
       <input
@@ -48,8 +45,8 @@ const LoginForm = (): JSX.Element => {
         id="password"
         placeholder="Password"
         className="login-form__field"
+        aria-label="password-textbox"
         autoComplete="off"
-        value={formSubmitted ? "" : password}
         onChange={handlePassword}
       />
 
