@@ -1,20 +1,56 @@
+import { useState } from "react";
+import useUser from "../../hooks/useUser/useUser";
 import Button from "../Button/Button";
 import LoginFormStyled from "./LoginFormStyled";
 
 const LoginForm = (): JSX.Element => {
+  const { loginUser } = useUser();
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleUsername = ({
+    target: { value },
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(value);
+  };
+
+  const handlePassword = ({
+    target: { value },
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(value);
+  };
+
+  const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    await loginUser({ username, password });
+
+    setUsername("");
+    setPassword("");
+    setFormSubmitted(true);
+  };
+
   return (
-    <LoginFormStyled className="login-form">
+    <LoginFormStyled className="login-form" onSubmit={onSubmitHandler}>
       <input
         type="text"
         id="username"
         placeholder="Username"
         className="login-form__field"
+        autoComplete="off"
+        value={formSubmitted ? "" : username}
+        onChange={handleUsername}
       />
       <input
         type="text"
         id="password"
         placeholder="Password"
         className="login-form__field"
+        autoComplete="off"
+        value={formSubmitted ? "" : password}
+        onChange={handlePassword}
       />
 
       <Button text="SEND" />
