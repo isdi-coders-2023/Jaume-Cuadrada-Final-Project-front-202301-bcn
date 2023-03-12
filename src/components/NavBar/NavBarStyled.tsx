@@ -42,9 +42,14 @@ const NavBarStyled = styled.nav`
     font-size: 16px;
   }
 
-  .navbar-icons {
+  .navbar-icon-left {
     margin: 0px;
     width: 24px;
+    height: 24px;
+  }
+  .navbar-icon-right {
+    margin: 0px;
+    width: 20.16px;
     height: 24px;
   }
 `;

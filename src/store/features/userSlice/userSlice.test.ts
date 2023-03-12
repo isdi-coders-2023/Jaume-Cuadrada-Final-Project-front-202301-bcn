@@ -1,11 +1,10 @@
-import { type User, type UserState } from "./types";
+import { type User, type UserState } from "../../../../types";
 import { loginUserActionCreator, userReducer } from "./userSlice";
 
 const initialState: UserState = {
   username: "",
   isLogged: false,
   token: "",
-  id: "",
 };
 
 describe("Given a userReducer reducer", () => {
@@ -14,12 +13,10 @@ describe("Given a userReducer reducer", () => {
       const user: User = {
         username: "jaume",
         token: "aasjdfklsdahfladshfdl",
-        id: "",
       };
       const expectedUserState: UserState = {
         username: user.username,
         token: user.token,
-        id: user.id,
         isLogged: true,
       };
 

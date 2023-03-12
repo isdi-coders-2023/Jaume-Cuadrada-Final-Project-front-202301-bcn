@@ -25,7 +25,7 @@ const LoginPageStyled = styled.div`
     background-image: url("media/photos/login.jpeg");
     background-size: cover;
     background-position: 65% center;
-    opacity: 0.08;
+    opacity: 0.1;
     z-index: -999;
   }
 `;
