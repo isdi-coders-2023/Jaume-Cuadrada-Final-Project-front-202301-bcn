@@ -13,6 +13,7 @@ const LoginFormStyled = styled.form`
     width: 404px;
     font-size: ${(props) => props.theme.fontSizes.medium};
     padding-left: 50px;
+    color: white;
   }
 
   button {

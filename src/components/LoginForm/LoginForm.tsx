@@ -17,7 +17,7 @@ const LoginForm = (): JSX.Element => {
         className="login-form__field"
       />
 
-      <Button text="SEND"></Button>
+      <Button text="SEND" />
     </LoginFormStyled>
   );
 };
