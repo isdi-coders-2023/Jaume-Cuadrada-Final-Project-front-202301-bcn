@@ -7,7 +7,7 @@ const NavBar = (): JSX.Element => {
         <img
           src="media/icons/Login_logo.png"
           alt="login logo"
-          className="navbar-icons"
+          className="navbar-icon-left"
         />
         <span>Login</span>
       </button>
@@ -15,7 +15,7 @@ const NavBar = (): JSX.Element => {
         <img
           src="media/icons/Register.png"
           alt="register logo"
-          className="navbar-icons"
+          className="navbar-icon-right"
         />
         <span>Register</span>
       </button>
