@@ -25,9 +25,6 @@ const LoginForm = (): JSX.Element => {
     event.preventDefault();
 
     await loginUser({ username, password });
-
-    setUsername("");
-    setPassword("");
   };
 
   return (
