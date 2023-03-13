@@ -6,7 +6,7 @@ const NavBarStyled = styled.nav`
   display: flex;
   flex-direction: row;
   height: 64px;
-  width: 428px;
+  width: 100%;
   color: white;
   font-size: 16px;
   border-top: 2px solid ${(props) => props.theme.colors.seccondaryGrey};
