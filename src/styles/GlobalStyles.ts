@@ -13,6 +13,11 @@ body {
   min-height: 100vh;
 }
 
+.container{
+  margin: 20px;
+  margin-bottom: 100px;
+}
+
 h1,h2{
   padding: 0;
   margin: 0;

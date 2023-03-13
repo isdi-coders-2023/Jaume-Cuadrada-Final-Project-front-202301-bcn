@@ -4,14 +4,14 @@ const LoginPageStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
+  gap: 30px;
 
   h1 {
     color: white;
   }
 
   img {
-    margin-top: 50px;
+    margin-top: 30px;
     height: 158px;
     width: 184px;
   }
@@ -25,6 +25,7 @@ const LoginPageStyled = styled.div`
     background-image: url("media/photos/login.jpeg");
     background-size: cover;
     background-position: 65% center;
+
     opacity: 0.1;
     z-index: -999;
   }

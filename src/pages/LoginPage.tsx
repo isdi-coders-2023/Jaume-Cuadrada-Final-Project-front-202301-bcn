@@ -10,7 +10,6 @@ const LoginPage = () => {
       <h1>LOGIN</h1>
       <LoginForm />
       <NavBar />
-
       <div className="image-container"></div>
     </LoginPageStyled>
   );
