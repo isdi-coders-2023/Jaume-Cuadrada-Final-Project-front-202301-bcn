@@ -1,9 +1,9 @@
 import { useAppDispatch } from "../../store/hooks";
-
 import decodeToken from "jwt-decode";
 import { LoginResponse, User } from "../../../types";
 import { loginUserActionCreator } from "../../store/features/userSlice/userSlice";
 import { CustomTokenPayload, UserCredentials } from "./types";
+import { showErrorToast } from "../../modals/modals";
 
 interface UseUserStructure {
   loginUser: (userCredentials: UserCredentials) => Promise<void>;
@@ -41,7 +41,9 @@ const useUser = (): UseUserStructure => {
       dispatch(loginUserActionCreator(userLogin));
 
       localStorage.setItem("token", token);
-    } catch (error) {}
+    } catch {
+      showErrorToast("Invalid credentials");
+    }
   };
   return { loginUser };
 };
