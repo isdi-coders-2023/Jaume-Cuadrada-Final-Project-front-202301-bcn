@@ -4,7 +4,7 @@ import { store } from "../../store/store";
 import { CustomTokenPayload, UserCredentials } from "./types";
 import useUser from "./useUser";
 import decodeToken from "jwt-decode";
-import { User } from "../../store/features/userSlice/types";
+import { User } from "../../../types";
 import { loginUserActionCreator } from "../../store/features/userSlice/userSlice";
 
 jest.mock("jwt-decode", () => jest.fn());
@@ -22,7 +22,6 @@ const userCredentials: UserCredentials = {
 
 const mockTokenPayload: CustomTokenPayload = {
   username: "jaume",
-  id: "1234455",
 };
 
 const mockToken = "vik27634fvj";
@@ -41,7 +40,6 @@ describe("Given a useUser custom hook", () => {
 
       const mockLoginUser: User = {
         username: mockTokenPayload.username,
-        id: mockTokenPayload.id,
         token: mockToken,
       };
 
