@@ -1,5 +1,6 @@
 import LoginForm from "../components/LoginForm/LoginForm";
 import NavBar from "../components/NavBar/NavBar";
+
 import LoginPageStyled from "./LoginPageStyled";
 
 const LoginPage = () => {
@@ -9,6 +10,7 @@ const LoginPage = () => {
       <h1>LOGIN</h1>
       <LoginForm />
       <NavBar />
+
       <div className="image-container"></div>
     </LoginPageStyled>
   );

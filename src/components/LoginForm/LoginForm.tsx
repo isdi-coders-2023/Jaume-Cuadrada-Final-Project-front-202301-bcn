@@ -38,7 +38,7 @@ const LoginForm = (): JSX.Element => {
         onChange={handleUsername}
       />
       <input
-        type="text"
+        type="password"
         id="password"
         placeholder="Password"
         className="login-form__field"
